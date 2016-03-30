@@ -1,0 +1,61 @@
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+body > div {
+  width: 100%;
+}
+.hui-profile-header {
+  position: relative;
+  height: 200px;
+}
+.hui-profile-header > div {
+  width: 100%;
+  height: 200px;
+}
+.hui-profile-header .hui-profile-img {
+  position: absolute;
+  z-index: 2;
+  background: url('/images/profileImg.png') no-repeat;
+  background-size: 320px 401px;
+}
+.hui-profile-header .hui-profile-headerName {
+  height: 190px;
+  position: absolute;
+  z-index: 10;
+  color: white;
+  padding-top: 170px;
+  font-size: 20px;
+  text-align: center;
+}
+.hui-profile-description {
+  height: 83px;
+  line-height: 83px;
+  padding-left: 11px;
+  border-bottom: 2px solid #EBEBEB;
+}
+.hui-profile-name {
+  height: 65px;
+  padding-top: 15px;
+  border-bottom: 2px solid #EBEBEB;
+  background: url('/images/userIcon.png') no-repeat 5% center;
+  background-size: 15px 18px;
+}
+.hui-profile-name .hui-profile-name-inner {
+  margin: 0 auto;
+  width: 70%;
+}
+.hui-profile-phone {
+  height: 65px;
+  border-bottom: 2px solid #EBEBEB;
+  padding-top: 15px;
+  background: url('/images/phoneIcon.png') no-repeat 5% center;
+  background-size: 15px 18px;
+}
+.hui-profile-phone .hui-profile-phone-inner {
+  margin: 0 auto;
+  width: 70%;
+}
