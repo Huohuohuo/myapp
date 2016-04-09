@@ -1,0 +1,22 @@
+extends layout
+block content
+    body.ms-controller(ms-controller='mainController')
+        div#chats_page
+            div.hui-chats-header.huo-flex-box
+                div.hui-chats-call
+                div.hui-chats-personalChats.hui-chats-header-down-border 会话
+                div.hui-chats-groupChats 群聊
+            div.hui-chats-content
+                div.hui-chats-content-itemBox.huo-flex-box
+                    div.hui-chats-itemBox-portrait.huo-parent-vertically-horizontally
+                        div
+                            img(src='../images/portrait.png')
+                    div.hui-chats-itemBox-content
+                        div.hui-chats-content-up.huo-flex-box
+                            div.hui-chats-content-username 美女bb
+                            div.hui-chats-content-time.huo-text-align-right  04:00PM
+                        div.hui-chats-content-down
+                            div.hui-chats-content-msg 好好加班！
+            include footer
+        script(src='/javascripts/chats.js')
+

@@ -5,15 +5,12 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');//bodyParser的功能是解析客户端请求，通常是通过POST发送的内容。
 
-//var mongoose = require('mongoose');
-//mongoose.connect('mongodb://localhost:27017/db-huo');
-//var db = mongoose.connection;
-//db.on('error', console.error.bind(console, 'connection error:'));
-//db.once('open', function () {
-//    console.log('connected to mongodb!');
-//});
 var routes = require('./routes/index');//routes是一个文件夹形式的本地模块，即./routes/index.js，它的功能是为指定路径组织返回内容，相当于MVC架构中的控制器。
 var profile = require('./routes/profile');//个人信息页
+var chats = require('./routes/chats');
+//var showIP =require('./routes/showIP');
+//var updateIP =require('./routes/updateIP');
+//var request = require('request');
 
 var app = express();//通过express()函数创建了一个应用的实例，后面的所有操作都是针对于这个实例进行的。
 
@@ -38,10 +35,13 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));//static提供了静态文件支持,配置了静态文件服务器
-app.use(express.static(path.join(__dirname, 'node_modules')));
+//app.use(express.static(path.join(__dirname, 'node_modules')));
 
 app.use('/', routes);//用户如果访问“/”路径，则由routes/index来控制。
 app.use('/profile', profile);//用户如果访问“/login”路径，则由routes/login 来控制。
+app.use('/chats',chats);
+//app.use('/showIP', showIP);
+//app.use('/updateIP', updateIP);
 
 // catch 404 and forward to error handler  错误控制器
 app.use(function (req, res, next) {

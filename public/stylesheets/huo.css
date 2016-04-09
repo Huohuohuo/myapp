@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.huo-flex-box {
+  display: box;
+  display: -webkit-box;
+}
+.huo-flex-box > div {
+  box-flex: 1;
+  -webkit-box-flex: 1;
+}
+.huo-parent-vertically-horizontally {
+  position: relative;
+}
+.huo-parent-vertically-horizontally > div:only-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.huo-text-align-center {
+  text-align: center!important;
+}
+.huo-text-align-right {
+  text-align: right!important;
+}

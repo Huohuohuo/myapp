@@ -1,0 +1,43 @@
+
+<!--模板文件不是孤立展示的，默认情况下所有的模板都继承自layout.ejs--><!DOCTYPE html>
+<html>
+  <head></head>
+  <meta http-equiv="X-UA-Compatible" content="text/html; charset=utf-8;IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title></title>
+  <link rel="stylesheet" href="/stylesheets/huo.css">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <script src="/javascripts/lib/require/require.js"></script>
+  <body ms-controller="mainController" class="ms-controller">
+    <div id="chats_page">
+      <div class="hui-chats-header huo-flex-box">
+        <div class="hui-chats-call"></div>
+        <div class="hui-chats-personalChats hui-chats-header-down-border">会话</div>
+        <div class="hui-chats-groupChats">群聊</div>
+      </div>
+      <div class="hui-chats-content">
+        <div class="hui-chats-content-itemBox huo-flex-box">
+          <div class="hui-chats-itemBox-portrait huo-parent-vertically-horizontally">
+            <div><img src="../images/portrait.png"></div>
+          </div>
+          <div class="hui-chats-itemBox-content">
+            <div class="hui-chats-content-up huo-flex-box">
+              <div class="hui-chats-content-username">美女bb</div>
+              <div class="hui-chats-content-time huo-text-align-right"> 04:00PM</div>
+            </div>
+            <div class="hui-chats-content-down">
+              <div class="hui-chats-content-msg">好好加班！</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hui-chats-footer huo-flex-box">
+        <div ms-click="goPages('chats')" class="hui-footer-chats"></div>
+        <div ms-click="goPages('profile')" class="hui-footer-profile"></div>
+        <div ms-click="goPages('settings')" class="hui-footer-settings"></div>
+        <div ms-click="goPages('calendar')" class="hui-footer-calendar"></div>
+      </div>
+    </div>
+    <script src="/javascripts/chats.js"></script>
+  </body>
+</html>

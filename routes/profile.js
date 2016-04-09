@@ -1,11 +1,9 @@
 var express = require('express');
 var profile = express.Router();
+
 //  '/'指/login的路径
 profile.all('/', function (req, res) {
-    res.render('index',{
-        title: 'profile',
-        temp:'temp'
-    });
+    res.render('profile');
 });
 
 // '/haha'指/login/haha 的路径
