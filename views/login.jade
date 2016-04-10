@@ -1,0 +1,11 @@
+extends layout
+block content
+    body.ms-controller(ms-controller='mainController')
+        div#login_page
+            div
+                input(type="text",ms-duplex="username")
+            div
+                input(type="password",ms-duplex="password")
+            button(ms-click="login")
+        script(src='/javascripts/login.js')
+

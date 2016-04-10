@@ -4,10 +4,10 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');//bodyParser的功能是解析客户端请求，通常是通过POST发送的内容。
-
 var routes = require('./routes/index');//routes是一个文件夹形式的本地模块，即./routes/index.js，它的功能是为指定路径组织返回内容，相当于MVC架构中的控制器。
 var profile = require('./routes/profile');//个人信息页
 var chats = require('./routes/chats');
+var login =  require('./routes/login');
 //var showIP =require('./routes/showIP');
 //var updateIP =require('./routes/updateIP');
 //var request = require('request');
@@ -40,6 +40,8 @@ app.use(express.static(path.join(__dirname, 'public')));//static提供了静态�
 app.use('/', routes);//用户如果访问“/”路径，则由routes/index来控制。
 app.use('/profile', profile);//用户如果访问“/login”路径，则由routes/login 来控制。
 app.use('/chats',chats);
+app.use('/login',login);
+
 //app.use('/showIP', showIP);
 //app.use('/updateIP', updateIP);
 
